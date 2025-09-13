@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: theme('fontFamily.sans');
+    background-color: theme('colors.brand.50');
+    color: theme('colors.content.primary');
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: theme('colors.content.primary');
+  }
+}
+
+@layer components {
+  /* Sidebar Layout */
+  .sidebar-layout {
+    @apply layout-sidebar transition-all duration-300;
+  }
+  
+  /* Navigation Components */
+  .nav-item {
+    @apply block px-3 py-2 text-sm font-medium text-content-secondary rounded-md;
+    @apply transition-colors duration-150 hover:bg-surface-hover hover:text-content-primary;
+  }
+  
+  .nav-item--active {
+    @apply bg-surface-active text-content-primary font-semibold;
+  }
+  
+  .nav-child {
+    @apply block px-3 py-1.5 text-xs font-medium text-content-tertiary rounded-md;
+    @apply transition-colors duration-150 hover:bg-surface-hover hover:text-content-secondary;
+  }
+  
+  .nav-child--active {
+    @apply bg-surface-active text-content-secondary font-semibold;
+  }
+  
+  /* Content Components - using direct classes now in Layout */
+  
+  /* Dark mode variants */
+  .dark .nav-item {
+    @apply text-content-inverse hover:bg-brand-800;
+  }
+  
+  .dark .nav-item--active {
+    @apply bg-brand-700 text-content-inverse;
+  }
+  
+  .dark .nav-child {
+    @apply text-brand-400 hover:text-content-inverse;
+  }
+}
