@@ -1,0 +1,35 @@
+export interface HeroContent {
+  announcement?: {
+    text: string;
+    linkText: string;
+    linkUrl: string;
+  };
+  headline: string;
+  description: string;
+  primaryButton: {
+    text: string;
+    url: string;
+  };
+  secondaryButton: {
+    text: string;
+    url: string;
+  };
+}
+
+export const heroContent: HeroContent = {
+  announcement: {
+    text: "Announcing our next round of funding.",
+    linkText: "Read more",
+    linkUrl: "#"
+  },
+  headline: "Data to enrich your online business",
+  description: "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.",
+  primaryButton: {
+    text: "Get started",
+    url: "#"
+  },
+  secondaryButton: {
+    text: "Learn more",
+    url: "#"
+  }
+};

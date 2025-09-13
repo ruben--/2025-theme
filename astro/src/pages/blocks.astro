@@ -1,7 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import StatsSection from '../components/blocks/StatsSection';
+import Hero from '../components/blocks/Hero';
 import statsData from '../data/blocks/stats-section.json';
+import heroData from '../data/blocks/hero.json';
 ---
 
 <BaseLayout 
@@ -14,6 +16,12 @@ import statsData from '../data/blocks/stats-section.json';
     </h1>
     
     <div class="w-full h-1 bg-orange-500 my-8" style="height: 4px;"></div>
+    <Hero 
+      client:load
+      content={heroData}
+    />
+    <div class="w-full h-1 bg-orange-500 my-8" style="height: 4px;"></div>
+    
     <StatsSection 
       client:load
       title={statsData.title}

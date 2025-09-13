@@ -107,6 +107,10 @@
     font-weight: 500;
     color: theme('colors.content.primary');
   }
+
+  button, .btn, [role="button"] {
+    border-radius: 9999px;
+  }
 }
 
 @layer components {
@@ -117,20 +121,32 @@
   
   /* Navigation Components */
   .nav-item {
-    @apply block px-3 py-2 text-sm font-medium text-content-secondary rounded-md;
+    @apply block px-3 py-2 text-sm font-medium text-content-secondary rounded-full;
     @apply transition-colors duration-150 hover:bg-surface-hover hover:text-content-primary;
   }
   
   .nav-item--active {
-    @apply bg-orange-500 text-content-inverse font-semibold;
+    @apply bg-surface-hover text-content-primary font-semibold;
+    position: relative;
+  }
+  
+  .nav-item--active::after {
+    content: "▶";
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: theme('colors.orange.500');
+    font-size: 10px;
+    font-weight: normal;
   }
   
   .nav-child {
-    @apply block px-3 py-1.5 text-xs font-medium text-content-tertiary rounded-md;
+    @apply block px-3 py-1.5 text-xs font-medium text-content-tertiary rounded-full;
     @apply transition-colors duration-150 hover:bg-surface-hover hover:text-content-secondary;
   }
   
   .nav-child--active {
-    @apply bg-orange-400 text-content-inverse font-semibold;
+    @apply bg-surface-hover text-content-secondary font-semibold;
   }
 }
