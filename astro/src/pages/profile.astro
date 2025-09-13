@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Profile - OpenAI Sidebar Template">
+  <div>
+    <h1 class="text-4xl font-semibold text-content-primary dark:text-content-inverse mb-8">
+      Profile
+    </h1>
+    
+    <div class="max-w-2xl">
+      <div class="space-y-8">
+        <div class="bg-surface dark:bg-brand-900 border border-brand-200 dark:border-brand-700 rounded-lg p-6">
+          <h2 class="text-xl font-semibold text-content-primary dark:text-content-inverse mb-4">
+            Account Information
+          </h2>
+          <div class="space-y-4">
+            <div>
+              <label class="text-sm font-medium text-content-primary dark:text-content-inverse">
+                Name
+              </label>
+              <input 
+                type="text" 
+                value="John Doe"
+                class="mt-1 block w-full px-3 py-2 border border-brand-300 dark:border-brand-600 rounded-md bg-surface dark:bg-brand-800 text-content-primary dark:text-content-inverse"
+              />
+            </div>
+            <div>
+              <label class="text-sm font-medium text-content-primary dark:text-content-inverse">
+                Email
+              </label>
+              <input 
+                type="email" 
+                value="john@example.com"
+                class="mt-1 block w-full px-3 py-2 border border-brand-300 dark:border-brand-600 rounded-md bg-surface dark:bg-brand-800 text-content-primary dark:text-content-inverse"
+              />
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-surface dark:bg-brand-900 border border-brand-200 dark:border-brand-700 rounded-lg p-6">
+          <h2 class="text-xl font-semibold text-content-primary dark:text-content-inverse mb-4">
+            Preferences
+          </h2>
+          <div class="space-y-4">
+            <div class="flex items-center justify-between">
+              <div>
+                <label class="text-sm font-medium text-content-primary dark:text-content-inverse">
+                  Email Notifications
+                </label>
+                <p class="text-sm text-content-secondary dark:text-brand-300">
+                  Receive updates and announcements
+                </p>
+              </div>
+              <input type="checkbox" class="rounded border-brand-300 dark:border-brand-600" checked />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

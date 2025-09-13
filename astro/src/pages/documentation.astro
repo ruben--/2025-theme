@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Documentation - OpenAI Sidebar Template">
+  <div>
+    <h1 class="text-4xl font-semibold text-content-primary dark:text-content-inverse mb-8">
+      Documentation
+    </h1>
+    
+    <div class="prose dark:prose-invert max-w-4xl">
+      <p class="text-xl text-content-secondary dark:text-brand-300 mb-8">
+        Complete guide to using and customizing the OpenAI sidebar template.
+      </p>
+      
+      <h2 class="text-2xl font-semibold text-content-primary dark:text-content-inverse mb-6">
+        Quick Start
+      </h2>
+      
+      <div class="bg-brand-50 dark:bg-brand-900 border-l-4 border-blue-500 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-content-primary dark:text-content-inverse mb-2">
+          Installation
+        </h3>
+        <div class="space-y-2">
+          <code class="bg-brand-900 dark:bg-brand-950 text-green-400 px-3 py-2 rounded text-sm block">
+            npm install
+          </code>
+          <code class="bg-brand-900 dark:bg-brand-950 text-green-400 px-3 py-2 rounded text-sm block">
+            npm run dev
+          </code>
+        </div>
+      </div>
+      
+      <h2 class="text-2xl font-semibold text-content-primary dark:text-content-inverse mb-6">
+        Features
+      </h2>
+      
+      <ul class="space-y-2 text-content-secondary dark:text-brand-300">
+        <li>✅ File-based routing with Astro</li>
+        <li>✅ React islands for interactivity</li>
+        <li>✅ Tailwind CSS with custom theme</li>
+        <li>✅ Dark mode support</li>
+        <li>✅ Responsive design</li>
+        <li>✅ TypeScript support</li>
+      </ul>
+    </div>
+  </div>
+</BaseLayout>

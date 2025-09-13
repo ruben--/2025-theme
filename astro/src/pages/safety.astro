@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Safety - OpenAI Sidebar Template">
+  <div>
+    <h1 class="text-4xl font-semibold text-content-primary dark:text-content-inverse mb-8">
+      Safety
+    </h1>
+    
+    <div class="prose dark:prose-invert max-w-4xl">
+      <p class="text-xl text-content-secondary dark:text-brand-300 mb-8">
+        Our commitment to building safe and responsible technology.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-surface dark:bg-brand-900 border border-brand-200 dark:border-brand-700 rounded-lg p-6">
+          <h2 class="text-xl font-semibold text-content-primary dark:text-content-inverse mb-4">
+            🛡️ Privacy Protection
+          </h2>
+          <p class="text-content-secondary dark:text-brand-300">
+            Your data is protected with enterprise-grade security and privacy controls.
+          </p>
+        </div>
+        
+        <div class="bg-surface dark:bg-brand-900 border border-brand-200 dark:border-brand-700 rounded-lg p-6">
+          <h2 class="text-xl font-semibold text-content-primary dark:text-content-inverse mb-4">
+            🔒 Secure by Design
+          </h2>
+          <p class="text-content-secondary dark:text-brand-300">
+            Built with security best practices and regular security audits.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

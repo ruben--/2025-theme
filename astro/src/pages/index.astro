@@ -1,0 +1,76 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Overview - OpenAI Sidebar Template">
+  <div>
+    <h1 class="text-4xl font-semibold text-content-primary dark:text-content-inverse mb-8">
+      Overview
+    </h1>
+    
+    <div class="prose dark:prose-invert max-w-4xl">
+      <p class="text-xl text-content-secondary dark:text-brand-300 mb-8">
+        Welcome to the OpenAI-style sidebar template built with Astro, React, and Tailwind CSS.
+      </p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-surface dark:bg-brand-900 border border-brand-200 dark:border-brand-700 rounded-lg p-6">
+          <h2 class="text-xl font-semibold text-content-primary dark:text-content-inverse mb-4">
+            🚀 Performance
+          </h2>
+          <p class="text-content-secondary dark:text-brand-300">
+            Built with Astro for optimal performance and SEO. Static generation with selective hydration for interactive components.
+          </p>
+        </div>
+        
+        <div class="bg-surface dark:bg-brand-900 border border-brand-200 dark:border-brand-700 rounded-lg p-6">
+          <h2 class="text-xl font-semibold text-content-primary dark:text-content-inverse mb-4">
+            🎨 Design System
+          </h2>
+          <p class="text-content-secondary dark:text-brand-300">
+            Comprehensive Tailwind CSS theme system with proper color scales, typography, and responsive design patterns.
+          </p>
+        </div>
+        
+        <div class="bg-surface dark:bg-brand-900 border border-brand-200 dark:border-brand-700 rounded-lg p-6">
+          <h2 class="text-xl font-semibold text-content-primary dark:text-content-inverse mb-4">
+            🌙 Dark Mode
+          </h2>
+          <p class="text-content-secondary dark:text-brand-300">
+            Complete dark mode support with system preference detection and manual toggle functionality.
+          </p>
+        </div>
+        
+        <div class="bg-surface dark:bg-brand-900 border border-brand-200 dark:border-brand-700 rounded-lg p-6">
+          <h2 class="text-xl font-semibold text-content-primary dark:text-content-inverse mb-4">
+            📱 Responsive
+          </h2>
+          <p class="text-content-secondary dark:text-brand-300">
+            Mobile-first design with collapsible sidebar and touch-friendly navigation optimized for all screen sizes.
+          </p>
+        </div>
+      </div>
+      
+      <h2 class="text-2xl font-semibold text-content-primary dark:text-content-inverse mb-6">
+        Getting Started
+      </h2>
+      
+      <div class="bg-brand-50 dark:bg-brand-900 border-l-4 border-blue-500 p-6 mb-6">
+        <h3 class="text-lg font-semibold text-content-primary dark:text-content-inverse mb-2">
+          Development Server
+        </h3>
+        <p class="text-content-secondary dark:text-brand-300 mb-4">
+          Start the development server to begin working with the template:
+        </p>
+        <code class="bg-brand-900 dark:bg-brand-950 text-green-400 px-3 py-2 rounded text-sm">
+          npm run dev
+        </code>
+      </div>
+      
+      <p class="text-content-secondary dark:text-brand-300">
+        This template demonstrates modern web development practices with Astro's island architecture, 
+        allowing you to build fast, SEO-friendly applications with selective client-side interactivity.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
