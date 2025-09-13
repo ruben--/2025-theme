@@ -1,0 +1,30 @@
+---
+import { getNavigationItems, isCurrentPage } from '../../lib/navigation';
+
+interface Props {
+  currentPath: string;
+  id?: string;
+  class?: string;
+}
+
+const { currentPath, id, class: className } = Astro.props;
+const navigationItems = await getNavigationItems();
+---
+
+<nav 
+  class={className}
+  id={id}
+  aria-label="Main navigation"
+>
+  <div class="space-y-0.5 py-4 pt-52">
+    {navigationItems.map((item) => (
+      <a 
+        href={item.href}
+        class={`nav-item ${isCurrentPage(item.href, currentPath) ? 'nav-item--active' : ''}`}
+        aria-current={isCurrentPage(item.href, currentPath) ? 'page' : undefined}
+      >
+        <span class="truncate">{item.title}</span>
+      </a>
+    ))}
+  </div>
+</nav>

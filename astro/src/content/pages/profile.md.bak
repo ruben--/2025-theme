@@ -1,0 +1,36 @@
+---
+title: "Profile"
+description: "User profile and account management."
+showInNav: true
+navOrder: 5
+---
+
+# Profile
+
+Manage your user profile and account information.
+
+## Account Information
+
+- **Username**: Your unique identifier
+- **Email**: Primary contact email
+- **Display Name**: Public display name
+- **Avatar**: Profile picture
+
+## Privacy Settings
+
+- **Profile Visibility**: Control who can see your profile
+- **Activity Tracking**: Manage activity visibility
+- **Data Sharing**: Control data sharing preferences
+
+## Security
+
+- **Password**: Update your password
+- **Two-Factor Authentication**: Enable 2FA for additional security
+- **Active Sessions**: Manage active login sessions
+- **Login History**: View recent login activity
+
+## Preferences
+
+- **Language**: Select preferred language
+- **Time Zone**: Set your time zone
+- **Notifications**: Configure notification preferences

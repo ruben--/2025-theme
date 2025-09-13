@@ -1,0 +1,30 @@
+---
+id: "stats-global"
+type: "stats"
+title: "Trusted by companies worldwide"
+description: "Our global reach and impact continues to grow year over year."
+stats:
+  - value: "99.9%"
+    title: "Uptime SLA"
+    description: "Industry-leading reliability for your business."
+    bgColor: "bg-green-50 dark:bg-green-900"
+    textColor: "text-green-900 dark:text-green-100"
+    valueColor: "text-green-900 dark:text-green-100"
+    descColor: "text-green-700 dark:text-green-300"
+  - value: "150+"
+    title: "Countries served"
+    description: "Global presence with local expertise."
+    bgColor: "bg-blue-50 dark:bg-blue-900"
+    textColor: "text-blue-900 dark:text-blue-100"
+    valueColor: "text-blue-900 dark:text-blue-100"
+    descColor: "text-blue-700 dark:text-blue-300"
+  - value: "24/7"
+    title: "Support availability"
+    description: "Round-the-clock assistance when you need it."
+    bgColor: "bg-purple-50 dark:bg-purple-900"
+    textColor: "text-purple-900 dark:text-purple-100"
+    valueColor: "text-purple-900 dark:text-purple-100"
+    descColor: "text-purple-700 dark:text-purple-300"
+---
+
+These metrics demonstrate our commitment to excellence and continuous improvement in serving our global customer base.

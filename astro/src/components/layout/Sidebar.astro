@@ -1,0 +1,17 @@
+---
+import Navigation from './Navigation.astro';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+---
+
+<div class="sticky top-0 h-screen hidden md:block bg-surface">
+  <Navigation 
+    currentPath={currentPath}
+    class="px-3 w-full h-full overflow-y-auto"
+    id="navigation-sidebar-desktop"
+  />
+</div>

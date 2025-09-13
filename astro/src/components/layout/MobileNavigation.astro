@@ -1,0 +1,38 @@
+---
+import { getNavigationItems, isCurrentPage } from '../../lib/navigation';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+const navigationItems = await getNavigationItems();
+---
+
+<nav class="px-3 py-4">
+  <div class="space-y-0.5">
+    {navigationItems.map((item) => (
+      <a 
+        href={item.href}
+        class={`nav-item block ${isCurrentPage(item.href, currentPath) ? 'nav-item--active' : ''}`}
+        data-mobile-nav-link
+        aria-current={isCurrentPage(item.href, currentPath) ? 'page' : undefined}
+      >
+        <span class="truncate">{item.title}</span>
+      </a>
+    ))}
+  </div>
+</nav>
+
+<script>
+  // Add click handler to close mobile menu when navigation links are clicked
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileNavLinks = document.querySelectorAll('[data-mobile-nav-link]');
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        // Dispatch custom event to close mobile menu
+        window.dispatchEvent(new CustomEvent('closeMobileMenu'));
+      });
+    });
+  });
+</script>

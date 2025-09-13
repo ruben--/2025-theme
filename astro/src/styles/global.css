@@ -1,0 +1,136 @@
+/* Graphik Font Face Declarations */
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/GraphikThin.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/GraphikExtralight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/GraphikExtralightItalic.otf') format('opentype');
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/GraphikLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/GraphikLightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/GraphikRegular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/GraphikRegularItalic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/GraphikMedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/GraphikMediumItalic.otf') format('opentype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/GraphikSemibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/GraphikSemiboldItalic.otf') format('opentype');
+  font-weight: 600;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/GraphikSuper.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Graphik';
+  src: url('/fonts/GraphikSuperItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: theme('fontFamily.sans');
+    background-color: theme('colors.surface.DEFAULT');
+    color: theme('colors.content.primary');
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: theme('colors.content.primary');
+  }
+}
+
+@layer components {
+  /* Sidebar Layout */
+  .sidebar-layout {
+    @apply layout-sidebar transition-all duration-300;
+  }
+  
+  /* Navigation Components */
+  .nav-item {
+    @apply block px-3 py-2 text-sm font-medium text-content-secondary rounded-md;
+    @apply transition-colors duration-150 hover:bg-surface-hover hover:text-content-primary;
+  }
+  
+  .nav-item--active {
+    @apply bg-orange-500 text-content-inverse font-semibold;
+  }
+  
+  .nav-child {
+    @apply block px-3 py-1.5 text-xs font-medium text-content-tertiary rounded-md;
+    @apply transition-colors duration-150 hover:bg-surface-hover hover:text-content-secondary;
+  }
+  
+  .nav-child--active {
+    @apply bg-orange-400 text-content-inverse font-semibold;
+  }
+}

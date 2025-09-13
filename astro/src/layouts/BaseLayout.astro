@@ -1,7 +1,9 @@
 ---
-import '../styles.css';
-import DarkModeToggle from '../components/DarkModeToggle';
-import MobileMenu from '../components/MobileMenu';
+import '../styles/global.css';
+import Header from '../components/layout/Header.astro';
+import Sidebar from '../components/layout/Sidebar.astro';
+import MobileMenu from '../components/ui/MobileMenu';
+import MobileNavigation from '../components/layout/MobileNavigation.astro';
 
 export interface Props {
   title: string;
@@ -34,56 +36,22 @@ const currentPath = Astro.url.pathname;
       })();
     </script>
   </head>
-  <body class="bg-brand-50 dark:bg-brand-950">
+  <body class="bg-surface">
     <div class="sidebar-layout">
       <!-- Desktop Column 1: Spacer (hidden on mobile) -->
       <div class="hidden md:block"></div>
       
       <!-- Desktop Column 2: Sidebar area (hidden on mobile) -->
-      <div class="sticky top-0 h-screen hidden md:block bg-surface dark:bg-brand-900">
-        <nav 
-          class="px-3 w-full h-full overflow-y-auto"
-          id="navigation-sidebar-desktop"
-          aria-label="Desktop navigation"
-        >
-          <div class="space-y-0.5 py-4 pt-20">
-            <a href="/" class={`nav-item ${currentPath === '/' ? 'nav-item--active' : ''}`} aria-current={currentPath === '/' ? 'page' : undefined}>
-              <span class="truncate">Overview</span>
-            </a>
-            <a href="/safety" class={`nav-item ${currentPath === '/safety' ? 'nav-item--active' : ''}`} aria-current={currentPath === '/safety' ? 'page' : undefined}>
-              <span class="truncate">Safety</span>
-            </a>
-            <a href="/documentation" class={`nav-item ${currentPath === '/documentation' ? 'nav-item--active' : ''}`} aria-current={currentPath === '/documentation' ? 'page' : undefined}>
-              <span class="truncate">Documentation</span>
-            </a>
-            <a href="/settings" class={`nav-item ${currentPath === '/settings' ? 'nav-item--active' : ''}`} aria-current={currentPath === '/settings' ? 'page' : undefined}>
-              <span class="truncate">Settings</span>
-            </a>
-            <a href="/profile" class={`nav-item ${currentPath === '/profile' ? 'nav-item--active' : ''}`} aria-current={currentPath === '/profile' ? 'page' : undefined}>
-              <span class="truncate">Profile</span>
-            </a>
-            <a href="/theme" class={`nav-item ${currentPath === '/theme' ? 'nav-item--active' : ''}`} aria-current={currentPath === '/theme' ? 'page' : undefined}>
-              <span class="truncate">Theme</span>
-            </a>
-            <a href="/blocks" class={`nav-item ${currentPath === '/blocks' ? 'nav-item--active' : ''}`} aria-current={currentPath === '/blocks' ? 'page' : undefined}>
-              <span class="truncate">Blocks</span>
-            </a>
-          </div>
-        </nav>
-      </div>
+      <Sidebar currentPath={currentPath} />
       
       <!-- Mobile: Column 1 / Desktop: Column 3 - Main Content Area -->
-      <main class="flex min-h-screen w-full flex-col bg-brand-50 dark:bg-brand-950">
+      <main class="flex min-h-screen w-full flex-col bg-surface">
         <!-- Mobile Header -->
-        <div class="md:hidden flex items-center justify-between p-4 bg-surface dark:bg-brand-900 border-b border-brand-200 dark:border-brand-800">
-          <h1 class="text-lg font-semibold text-content-primary dark:text-content-inverse">
-            Navigation
-          </h1>
-          <div class="flex items-center space-x-3">
-            <DarkModeToggle client:load />
-            <MobileMenu client:load />
-          </div>
-        </div>
+        <Header title="Navigation">
+          <MobileMenu client:load>
+            <MobileNavigation currentPath={currentPath} />
+          </MobileMenu>
+        </Header>
         
         <!-- Content Wrapper -->
         <div class="mx-auto w-full max-w-container px-6 py-8 md:py-12 lg:px-8">

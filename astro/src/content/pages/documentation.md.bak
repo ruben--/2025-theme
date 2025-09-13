@@ -1,0 +1,54 @@
+---
+title: "Documentation"
+description: "Complete documentation for the OpenAI sidebar template project."
+showInNav: true
+navOrder: 3
+---
+
+# Documentation
+
+Comprehensive documentation for understanding and working with this template.
+
+## Getting Started
+
+This template provides a modern, responsive sidebar navigation pattern similar to OpenAI's interface, built with Astro for optimal performance.
+
+## Architecture
+
+- **Astro Framework**: Static site generation with selective hydration
+- **React Components**: Interactive elements like dark mode toggle
+- **Tailwind CSS**: Utility-first styling with custom design system
+- **Content Collections**: Structured content management
+
+## Key Features
+
+- Responsive design with mobile-first approach
+- Dark mode support with system preference detection
+- Type-safe navigation and content management
+- SEO-optimized with proper meta tags
+- Performance-optimized with Astro's island architecture
+
+## Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
+```
+
+## Customization
+
+The template is designed to be easily customizable:
+
+1. **Navigation**: Edit `src/content/navigation/main.json`
+2. **Pages**: Add content in `src/content/pages/`
+3. **Styling**: Modify `tailwind.config.js` and `src/styles.css`
+4. **Components**: Create reusable components in `src/components/`

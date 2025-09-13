@@ -2,209 +2,563 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Theme - OpenAI Sidebar Template">
-  <div>
-    <h1 class="text-4xl font-semibold text-content-primary dark:text-content-inverse mb-8">
-      Theme System
-    </h1>
-    
-    <p class="text-xl text-content-secondary dark:text-brand-300 mb-8">
-      Comprehensive design system built with Tailwind CSS featuring proper color scales, typography, and responsive patterns.
-    </p>
-      
-      <h2 class="text-2xl font-semibold text-content-primary dark:text-content-inverse mb-6">
-        Color Palette
-      </h2>
-      
-      <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
-        <div class="text-center">
-          <div class="w-full h-16 rounded-lg mb-2 bg-brand-50"></div>
-          <p class="text-sm text-content-secondary dark:text-brand-300">brand-50</p>
-        </div>
-        <div class="text-center">
-          <div class="w-full h-16 rounded-lg mb-2 bg-brand-100"></div>
-          <p class="text-sm text-content-secondary dark:text-brand-300">brand-100</p>
-        </div>
-        <div class="text-center">
-          <div class="w-full h-16 rounded-lg mb-2 bg-brand-200"></div>
-          <p class="text-sm text-content-secondary dark:text-brand-300">brand-200</p>
-        </div>
-        <div class="text-center">
-          <div class="w-full h-16 rounded-lg mb-2 bg-brand-300"></div>
-          <p class="text-sm text-content-secondary dark:text-brand-300">brand-300</p>
-        </div>
-        <div class="text-center">
-          <div class="w-full h-16 rounded-lg mb-2 bg-brand-400"></div>
-          <p class="text-sm text-content-secondary dark:text-brand-300">brand-400</p>
-        </div>
-        <div class="text-center">
-          <div class="w-full h-16 rounded-lg mb-2 bg-brand-500"></div>
-          <p class="text-sm text-content-secondary dark:text-brand-300">brand-500</p>
-        </div>
-        <div class="text-center">
-          <div class="w-full h-16 rounded-lg mb-2 bg-brand-600"></div>
-          <p class="text-sm text-content-secondary dark:text-brand-300">brand-600</p>
-        </div>
-        <div class="text-center">
-          <div class="w-full h-16 rounded-lg mb-2 bg-brand-700"></div>
-          <p class="text-sm text-content-secondary dark:text-brand-300">brand-700</p>
-        </div>
-        <div class="text-center">
-          <div class="w-full h-16 rounded-lg mb-2 bg-brand-800"></div>
-          <p class="text-sm text-content-secondary dark:text-brand-300">brand-800</p>
-        </div>
-        <div class="text-center">
-          <div class="w-full h-16 rounded-lg mb-2 bg-brand-900"></div>
-          <p class="text-sm text-content-secondary dark:text-brand-300">brand-900</p>
-        </div>
-        <div class="text-center">
-          <div class="w-full h-16 rounded-lg mb-2 bg-brand-950"></div>
-          <p class="text-sm text-content-secondary dark:text-brand-300">brand-950</p>
-        </div>
+<BaseLayout 
+  title="Theme Reference - OpenAI Sidebar Template"
+  description="Complete reference guide for fonts, colors, sizes, and other theme elements."
+>
+  <div class="px-8">
+    <div class="max-w-container mx-auto py-12">
+      <div class="mb-12">
+        <h1 class="text-4xl font-bold text-content-primary mb-4">
+          Theme Reference Guide
+        </h1>
+        <p class="text-xl text-content-secondary mb-8">
+          Complete visual guide to all available design tokens, colors, typography, and spacing.
+        </p>
       </div>
-      
-      <h2 class="text-2xl font-semibold text-content-primary dark:text-content-inverse mb-6">
-        Typography Scale
-      </h2>
-      
-      <div class="space-y-4 mb-8">
-        <div>
-          <h1 class="text-6xl font-bold text-content-primary dark:text-content-inverse">Heading 1</h1>
-          <code class="text-sm text-content-tertiary">text-6xl font-bold</code>
-        </div>
-        <div>
-          <h2 class="text-4xl font-semibold text-content-primary dark:text-content-inverse">Heading 2</h2>
-          <code class="text-sm text-content-tertiary">text-4xl font-semibold</code>
-        </div>
-        <div>
-          <h3 class="text-2xl font-semibold text-content-primary dark:text-content-inverse">Heading 3</h3>
-          <code class="text-sm text-content-tertiary">text-2xl font-semibold</code>
-        </div>
-        <div>
-          <p class="text-base text-content-primary dark:text-content-inverse">Body text with proper line height and spacing for optimal readability.</p>
-          <code class="text-sm text-content-tertiary">text-base</code>
-        </div>
-      </div>
-      
-      <h2 class="text-2xl font-semibold text-content-primary dark:text-content-inverse mb-6">
-        Grid System Examples
-      </h2>
-      
-      <div class="space-y-8 mb-8">
-        {/* 12-Column Grid Example */}
-        <div>
-          <h3 class="text-lg font-semibold text-content-primary dark:text-content-inverse mb-4">
-            12-Column Grid System
-          </h3>
-          <div class="grid grid-cols-12 gap-4">
-            <div class="col-span-1 bg-blue-100 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded p-2 text-center text-sm text-blue-800 dark:text-blue-200">1</div>
-            <div class="col-span-1 bg-blue-100 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded p-2 text-center text-sm text-blue-800 dark:text-blue-200">2</div>
-            <div class="col-span-1 bg-blue-100 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded p-2 text-center text-sm text-blue-800 dark:text-blue-200">3</div>
-            <div class="col-span-1 bg-blue-100 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded p-2 text-center text-sm text-blue-800 dark:text-blue-200">4</div>
-            <div class="col-span-1 bg-blue-100 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded p-2 text-center text-sm text-blue-800 dark:text-blue-200">5</div>
-            <div class="col-span-1 bg-blue-100 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded p-2 text-center text-sm text-blue-800 dark:text-blue-200">6</div>
-            <div class="col-span-1 bg-blue-100 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded p-2 text-center text-sm text-blue-800 dark:text-blue-200">7</div>
-            <div class="col-span-1 bg-blue-100 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded p-2 text-center text-sm text-blue-800 dark:text-blue-200">8</div>
-            <div class="col-span-1 bg-blue-100 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded p-2 text-center text-sm text-blue-800 dark:text-blue-200">9</div>
-            <div class="col-span-1 bg-blue-100 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded p-2 text-center text-sm text-blue-800 dark:text-blue-200">10</div>
-            <div class="col-span-1 bg-blue-100 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded p-2 text-center text-sm text-blue-800 dark:text-blue-200">11</div>
-            <div class="col-span-1 bg-blue-100 dark:bg-blue-900 border border-blue-300 dark:border-blue-700 rounded p-2 text-center text-sm text-blue-800 dark:text-blue-200">12</div>
-          </div>
-        </div>
+
+      <!-- Colors Section -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-content-primary mb-8">Colors</h2>
         
-        {/* Responsive Column Examples */}
-        <div>
-          <h3 class="text-lg font-semibold text-content-primary dark:text-content-inverse mb-4">
-            Responsive Columns
-          </h3>
-          <div class="grid grid-cols-12 gap-4 mb-4">
-            <div class="col-span-12 md:col-span-6 bg-green-100 dark:bg-green-900 border border-green-300 dark:border-green-700 rounded p-4">
-              <p class="text-green-800 dark:text-green-200 text-sm">
-                col-span-12 md:col-span-6
-              </p>
+        <!-- Brand Colors -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold text-content-primary mb-6">Brand Colors (Grayscale)</h3>
+          <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-10 gap-4 mb-8">
+            <div class="text-center">
+              <div class="h-20 w-full bg-brand-50 rounded-lg border border-gray-200 mb-2"></div>
+              <div class="text-sm font-mono text-content-primary">brand-50</div>
+              <div class="text-xs text-content-secondary">#fafafa</div>
             </div>
-            <div class="col-span-12 md:col-span-6 bg-green-100 dark:bg-green-900 border border-green-300 dark:border-green-700 rounded p-4">
-              <p class="text-green-800 dark:text-green-200 text-sm">
-                col-span-12 md:col-span-6
-              </p>
+            <div class="text-center">
+              <div class="h-20 w-full bg-brand-100 rounded-lg border border-gray-200 mb-2"></div>
+              <div class="text-sm font-mono text-content-primary">brand-100</div>
+              <div class="text-xs text-content-secondary">#f5f5f5</div>
             </div>
-          </div>
-          
-          <div class="grid grid-cols-12 gap-4 mb-4">
-            <div class="col-span-12 md:col-span-4 bg-purple-100 dark:bg-purple-900 border border-purple-300 dark:border-purple-700 rounded p-4">
-              <p class="text-purple-800 dark:text-purple-200 text-sm">
-                col-span-12 md:col-span-4
-              </p>
+            <div class="text-center">
+              <div class="h-20 w-full bg-brand-200 rounded-lg border border-gray-200 mb-2"></div>
+              <div class="text-sm font-mono text-content-primary">brand-200</div>
+              <div class="text-xs text-content-secondary">#e5e5e5</div>
             </div>
-            <div class="col-span-12 md:col-span-4 bg-purple-100 dark:bg-purple-900 border border-purple-300 dark:border-purple-700 rounded p-4">
-              <p class="text-purple-800 dark:text-purple-200 text-sm">
-                col-span-12 md:col-span-4
-              </p>
+            <div class="text-center">
+              <div class="h-20 w-full bg-brand-300 rounded-lg border border-gray-200 mb-2"></div>
+              <div class="text-sm font-mono text-content-primary">brand-300</div>
+              <div class="text-xs text-content-secondary">#d4d4d4</div>
             </div>
-            <div class="col-span-12 md:col-span-4 bg-purple-100 dark:bg-purple-900 border border-purple-300 dark:border-purple-700 rounded p-4">
-              <p class="text-purple-800 dark:text-purple-200 text-sm">
-                col-span-12 md:col-span-4
-              </p>
+            <div class="text-center">
+              <div class="h-20 w-full bg-brand-400 rounded-lg border border-gray-200 mb-2"></div>
+              <div class="text-sm font-mono text-content-primary">brand-400</div>
+              <div class="text-xs text-content-secondary">#a3a3a3</div>
             </div>
-          </div>
-          
-          <div class="grid grid-cols-12 gap-4">
-            <div class="col-span-12 md:col-span-8 bg-orange-100 dark:bg-orange-900 border border-orange-300 dark:border-orange-700 rounded p-4">
-              <p class="text-orange-800 dark:text-orange-200 text-sm">
-                col-span-12 md:col-span-8
-              </p>
+            <div class="text-center">
+              <div class="h-20 w-full bg-brand-500 rounded-lg mb-2"></div>
+              <div class="text-sm font-mono text-content-inverse">brand-500</div>
+              <div class="text-xs text-content-secondary">#737373</div>
             </div>
-            <div class="col-span-12 md:col-span-4 bg-orange-100 dark:bg-orange-900 border border-orange-300 dark:border-orange-700 rounded p-4">
-              <p class="text-orange-800 dark:text-orange-200 text-sm">
-                col-span-12 md:col-span-4
-              </p>
+            <div class="text-center">
+              <div class="h-20 w-full bg-brand-600 rounded-lg mb-2"></div>
+              <div class="text-sm font-mono text-content-inverse">brand-600</div>
+              <div class="text-xs text-content-secondary">#525252</div>
+            </div>
+            <div class="text-center">
+              <div class="h-20 w-full bg-brand-700 rounded-lg mb-2"></div>
+              <div class="text-sm font-mono text-content-inverse">brand-700</div>
+              <div class="text-xs text-content-secondary">#404040</div>
+            </div>
+            <div class="text-center">
+              <div class="h-20 w-full bg-brand-800 rounded-lg mb-2"></div>
+              <div class="text-sm font-mono text-content-inverse">brand-800</div>
+              <div class="text-xs text-content-secondary">#262626</div>
+            </div>
+            <div class="text-center">
+              <div class="h-20 w-full bg-brand-900 rounded-lg mb-2"></div>
+              <div class="text-sm font-mono text-content-inverse">brand-900</div>
+              <div class="text-xs text-content-secondary">#171717</div>
             </div>
           </div>
         </div>
+
+        <!-- Orange Color Scheme -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold text-content-primary mb-6">Orange Color Scheme</h3>
+          <div class="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-10 gap-4 mb-8">
+            <div class="text-center">
+              <div class="h-20 w-full bg-orange-50 rounded-lg border border-gray-200 mb-2"></div>
+              <div class="text-sm font-mono text-content-primary">orange-50</div>
+              <div class="text-xs text-content-secondary">#fff7ed</div>
+            </div>
+            <div class="text-center">
+              <div class="h-20 w-full bg-orange-100 rounded-lg border border-gray-200 mb-2"></div>
+              <div class="text-sm font-mono text-content-primary">orange-100</div>
+              <div class="text-xs text-content-secondary">#ffedd5</div>
+            </div>
+            <div class="text-center">
+              <div class="h-20 w-full bg-orange-200 rounded-lg border border-gray-200 mb-2"></div>
+              <div class="text-sm font-mono text-content-primary">orange-200</div>
+              <div class="text-xs text-content-secondary">#fed7aa</div>
+            </div>
+            <div class="text-center">
+              <div class="h-20 w-full bg-orange-300 rounded-lg border border-gray-200 mb-2"></div>
+              <div class="text-sm font-mono text-content-primary">orange-300</div>
+              <div class="text-xs text-content-secondary">#fdba74</div>
+            </div>
+            <div class="text-center">
+              <div class="h-20 w-full bg-orange-400 rounded-lg border border-gray-200 mb-2"></div>
+              <div class="text-sm font-mono text-content-primary">orange-400</div>
+              <div class="text-xs text-content-secondary">#fb923c</div>
+            </div>
+            <div class="text-center">
+              <div class="h-20 w-full bg-orange-500 rounded-lg mb-2"></div>
+              <div class="text-sm font-mono text-content-inverse">orange-500</div>
+              <div class="text-xs text-content-secondary">#f97316</div>
+            </div>
+            <div class="text-center">
+              <div class="h-20 w-full bg-orange-600 rounded-lg mb-2"></div>
+              <div class="text-sm font-mono text-content-inverse">orange-600</div>
+              <div class="text-xs text-content-secondary">#ea580c</div>
+            </div>
+            <div class="text-center">
+              <div class="h-20 w-full bg-orange-700 rounded-lg mb-2"></div>
+              <div class="text-sm font-mono text-content-inverse">orange-700</div>
+              <div class="text-xs text-content-secondary">#c2410c</div>
+            </div>
+            <div class="text-center">
+              <div class="h-20 w-full bg-orange-800 rounded-lg mb-2"></div>
+              <div class="text-sm font-mono text-content-inverse">orange-800</div>
+              <div class="text-xs text-content-secondary">#9a3412</div>
+            </div>
+            <div class="text-center">
+              <div class="h-20 w-full bg-orange-900 rounded-lg mb-2"></div>
+              <div class="text-sm font-mono text-content-inverse">orange-900</div>
+              <div class="text-xs text-content-secondary">#7c2d12</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Surface Colors -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold text-content-primary mb-6">Surface Colors</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="text-center">
+              <div class="h-24 w-full bg-brand-800 border border-gray-200 rounded-lg mb-3"></div>
+              <div class="text-sm font-mono text-content-primary mb-1">bg-brand-800</div>
+              <div class="text-xs text-content-secondary">#ffffff</div>
+            </div>
+            <div class="text-center">
+              <div class="h-24 w-full bg-surface-hover border border-gray-200 rounded-lg mb-3"></div>
+              <div class="text-sm font-mono text-content-primary mb-1">bg-surface-hover</div>
+              <div class="text-xs text-content-secondary">rgba(0,0,0,0.04)</div>
+            </div>
+            <div class="text-center">
+              <div class="h-24 w-full bg-surface-active border border-gray-200 rounded-lg mb-3"></div>
+              <div class="text-sm font-mono text-content-primary mb-1">bg-surface-active</div>
+              <div class="text-xs text-content-secondary">rgba(0,0,0,0.08)</div>
+            </div>
+            <div class="text-center">
+              <div class="h-24 w-full bg-brand-950 rounded-lg mb-3"></div>
+              <div class="text-sm font-mono text-content-inverse mb-1">bg-brand-950</div>
+              <div class="text-xs text-content-secondary">#0f0f0f</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Colors -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold text-content-primary  mb-6">Text Colors</h3>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-6 bg-brand-800 border border-gray-200 rounded-lg">
+              <div class="text-content-primary text-lg font-medium mb-2">Primary Text</div>
+              <code class="text-xs bg-brand-800 text-content-secondary px-2 py-1 rounded">text-content-primary</code>
+              <div class="text-xs text-content-secondary mt-1">#0f0f0f</div>
+            </div>
+            <div class="p-6 bg-brand-800 border border-gray-200 rounded-lg">
+              <div class="text-content-secondary text-lg font-medium mb-2">Secondary Text</div>
+              <code class="text-xs bg-brand-800 text-content-secondary px-2 py-1 rounded">text-content-secondary</code>
+              <div class="text-xs text-content-secondary mt-1">#6b6b6b</div>
+            </div>
+            <div class="p-6 bg-brand-800 border border-gray-200 rounded-lg">
+              <div class="text-content-tertiary text-lg font-medium mb-2">Tertiary Text</div>
+              <code class="text-xs bg-brand-800 text-content-secondary px-2 py-1 rounded">text-content-tertiary</code>
+              <div class="text-xs text-content-secondary mt-1">#8d8d8d</div>
+            </div>
+            <div class="p-6 bg-gray-900 rounded-lg">
+              <div class="text-content-inverse text-lg font-medium mb-2">Inverse Text</div>
+              <code class="text-xs bg-gray-800 px-2 py-1 rounded text-content-secondary">text-content-inverse</code>
+              <div class="text-xs text-content-tertiary mt-1">#ffffff</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Typography Section -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-content-primary  mb-8">Typography</h2>
         
-        {/* Spacing Examples */}
-        <div>
-          <h3 class="text-lg font-semibold text-content-primary dark:text-content-inverse mb-4">
-            Custom Spacing System
-          </h3>
+        <!-- Font Family -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold text-content-primary mb-6">Font Family</h3>
+          <div class="p-6 bg-brand-900 rounded-lg">
+            <div class="font-sans text-lg mb-2 text-content-primary">Graphik Font Family</div>
+            <code class="text-sm text-content-secondary">font-family: Graphik, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif</code>
+            <div class="mt-4 space-y-2">
+              <div class="text-sm text-content-secondary">Available weights:</div>
+              <div class="grid grid-cols-2 gap-2 text-sm">
+                <div class="font-thin text-content-primary">Thin (100)</div>
+                <div class="font-extralight text-content-primary">Extralight (200)</div>
+                <div class="font-light text-content-primary">Light (300)</div>
+                <div class="font-normal text-content-primary">Regular (400)</div>
+                <div class="font-medium text-content-primary">Medium (500)</div>
+                <div class="font-semibold text-content-primary">Semibold (600)</div>
+                <div class="font-bold text-content-primary">Super (700)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Font Sizes -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold text-content-primary  mb-6">Font Sizes</h3>
+          <div class="space-y-6">
+            <div class="flex items-center gap-6">
+              <code class="text-xs text-content-tertiary w-20 font-mono">text-xs</code>
+              <span class="text-xs">The quick brown fox jumps over the lazy dog</span>
+              <span class="text-xs text-content-tertiary">12px</span>
+            </div>
+            <div class="flex items-center gap-6">
+              <code class="text-xs text-content-tertiary w-20 font-mono">text-sm</code>
+              <span class="text-sm">The quick brown fox jumps over the lazy dog</span>
+              <span class="text-xs text-content-tertiary">14px</span>
+            </div>
+            <div class="flex items-center gap-6">
+              <code class="text-xs text-content-tertiary w-20 font-mono">text-base</code>
+              <span class="text-base">The quick brown fox jumps over the lazy dog</span>
+              <span class="text-xs text-content-tertiary">16px</span>
+            </div>
+            <div class="flex items-center gap-6">
+              <code class="text-xs text-content-tertiary w-20 font-mono">text-lg</code>
+              <span class="text-lg">The quick brown fox jumps over the lazy dog</span>
+              <span class="text-xs text-content-tertiary">18px</span>
+            </div>
+            <div class="flex items-center gap-6">
+              <code class="text-xs text-content-tertiary w-20 font-mono">text-xl</code>
+              <span class="text-xl">The quick brown fox jumps over the lazy dog</span>
+              <span class="text-xs text-content-tertiary">20px</span>
+            </div>
+            <div class="flex items-center gap-6">
+              <code class="text-xs text-content-tertiary w-20 font-mono">text-2xl</code>
+              <span class="text-2xl">The quick brown fox jumps</span>
+              <span class="text-xs text-content-tertiary">24px</span>
+            </div>
+            <div class="flex items-center gap-6">
+              <code class="text-xs text-content-tertiary w-20 font-mono">text-3xl</code>
+              <span class="text-3xl">The quick brown fox</span>
+              <span class="text-xs text-content-tertiary">30px</span>
+            </div>
+            <div class="flex items-center gap-6">
+              <code class="text-xs text-content-tertiary w-20 font-mono">text-4xl</code>
+              <span class="text-4xl">The quick brown</span>
+              <span class="text-xs text-content-tertiary">36px</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Font Weights -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold text-content-primary  mb-6">Font Weights</h3>
           <div class="space-y-4">
-            <div class="flex items-center gap-4">
-              <div class="w-16 h-16 bg-brand-200 dark:bg-brand-700 rounded"></div>
-              <code class="text-sm text-content-tertiary">Default spacing (1rem)</code>
+            <div class="flex items-center gap-6">
+              <code class="text-xs text-content-tertiary w-24 font-mono">font-light</code>
+              <span class="font-light text-xl">Light (300)</span>
             </div>
-            <div class="flex items-center gap-18">
-              <div class="w-16 h-16 bg-brand-200 dark:bg-brand-700 rounded"></div>
-              <code class="text-sm text-content-tertiary">gap-18 (4.5rem)</code>
+            <div class="flex items-center gap-6">
+              <code class="text-xs text-content-tertiary w-24 font-mono">font-normal</code>
+              <span class="font-normal text-xl">Normal (400)</span>
             </div>
-            <div class="flex items-center gap-88">
-              <div class="w-16 h-16 bg-brand-200 dark:bg-brand-700 rounded"></div>
-              <code class="text-sm text-content-tertiary">gap-88 (22rem)</code>
+            <div class="flex items-center gap-6">
+              <code class="text-xs text-content-tertiary w-24 font-mono">font-medium</code>
+              <span class="font-medium text-xl">Medium (500)</span>
+            </div>
+            <div class="flex items-center gap-6">
+              <code class="text-xs text-content-tertiary w-24 font-mono">font-semibold</code>
+              <span class="font-semibold text-xl">Semibold (600)</span>
+            </div>
+            <div class="flex items-center gap-6">
+              <code class="text-xs text-content-tertiary w-24 font-mono">font-bold</code>
+              <span class="font-bold text-xl">Bold (700)</span>
             </div>
           </div>
         </div>
-      </div>
-      
-      <h2 class="text-2xl font-semibold text-content-primary dark:text-content-inverse mb-6">
-        Interactive Elements
-      </h2>
-      
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="space-y-4">
-          <button class="bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition-colors">
-            Primary Button
-          </button>
-          <button class="border border-brand-300 dark:border-brand-600 text-content-primary dark:text-content-inverse px-6 py-3 rounded-md hover:bg-surface-hover dark:hover:bg-brand-800 transition-colors">
-            Secondary Button
-          </button>
+
+        <!-- Typography Elements -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold text-content-primary mb-6">Typography Elements</h3>
+          <div class="space-y-8 p-8 bg-brand-900 rounded-lg">
+            
+            <!-- Headings -->
+            <div class="space-y-4">
+              <div class="text-content-secondary text-sm font-medium mb-4">Headings</div>
+              <h1 class="text-6xl font-bold text-content-primary">H1 Heading - The quick brown fox</h1>
+              <h2 class="text-5xl font-bold text-content-primary">H2 Heading - The quick brown fox</h2>
+              <h3 class="text-4xl font-semibold text-content-primary">H3 Heading - The quick brown fox</h3>
+              <h4 class="text-3xl font-semibold text-content-primary">H4 Heading - The quick brown fox</h4>
+              <h5 class="text-2xl font-medium text-content-primary">H5 Heading - The quick brown fox</h5>
+              <h6 class="text-xl font-medium text-content-primary">H6 Heading - The quick brown fox</h6>
+            </div>
+
+            <!-- Body Text -->
+            <div class="space-y-4 border-t border-brand-700 pt-8">
+              <div class="text-content-secondary text-sm font-medium mb-4">Body Text</div>
+              <p class="text-lg text-content-primary leading-relaxed">
+                Large paragraph text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+              </p>
+              <p class="text-base text-content-primary leading-relaxed">
+                Regular paragraph text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+              </p>
+              <p class="text-sm text-content-secondary leading-relaxed">
+                Small text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <p class="text-xs text-content-tertiary leading-relaxed">
+                Extra small text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.
+              </p>
+            </div>
+
+            <!-- Links and Interactive Text -->
+            <div class="space-y-4 border-t border-brand-700 pt-8">
+              <div class="text-content-secondary text-sm font-medium mb-4">Links & Interactive</div>
+              <div class="space-y-2">
+                <a href="#" class="text-orange-500 hover:text-orange-400 underline text-base">Primary link example</a>
+                <br>
+                <a href="#" class="text-content-secondary hover:text-content-primary text-base">Secondary link example</a>
+                <br>
+                <button class="px-4 py-2 bg-orange-500 text-content-inverse rounded hover:bg-orange-600 font-medium">
+                  Button Example
+                </button>
+              </div>
+            </div>
+
+            <!-- Lists -->
+            <div class="space-y-4 border-t border-brand-700 pt-8">
+              <div class="text-content-secondary text-sm font-medium mb-4">Lists</div>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h6 class="text-content-primary font-semibold mb-3">Unordered List</h6>
+                  <ul class="space-y-2 text-content-primary">
+                    <li class="flex items-start gap-2">
+                      <span class="text-orange-500 mt-1">•</span>
+                      <span>First list item with some longer text to show wrapping</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-orange-500 mt-1">•</span>
+                      <span>Second list item</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-orange-500 mt-1">•</span>
+                      <span>Third list item</span>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <h6 class="text-content-primary font-semibold mb-3">Ordered List</h6>
+                  <ol class="space-y-2 text-content-primary">
+                    <li class="flex items-start gap-3">
+                      <span class="text-orange-500 font-medium">1.</span>
+                      <span>First numbered item with longer text</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="text-orange-500 font-medium">2.</span>
+                      <span>Second numbered item</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                      <span class="text-orange-500 font-medium">3.</span>
+                      <span>Third numbered item</span>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quotes and Code -->
+            <div class="space-y-4 border-t border-brand-700 pt-8">
+              <div class="text-content-secondary text-sm font-medium mb-4">Quotes & Code</div>
+              <blockquote class="border-l-4 border-orange-500 pl-4 py-2 bg-brand-800 rounded-r">
+                <p class="text-content-primary italic text-lg leading-relaxed">
+                  "This is a blockquote example to show how quoted text appears in the design system."
+                </p>
+                <cite class="text-content-secondary text-sm">— Citation Source</cite>
+              </blockquote>
+              
+              <div class="space-y-3">
+                <code class="inline-block px-2 py-1 bg-brand-800 text-orange-400 rounded text-sm font-mono">
+                  Inline code example
+                </code>
+                <pre class="bg-brand-800 text-content-primary p-4 rounded font-mono text-sm overflow-x-auto">
+                  <code>{`// Code block example
+function example() {
+  return "Hello, World!";
+}`}</code>
+                </pre>
+              </div>
+            </div>
+
+          </div>
         </div>
-        <div class="bg-surface dark:bg-brand-900 border border-brand-200 dark:border-brand-700 rounded-lg p-6">
-          <h3 class="text-lg font-semibold text-content-primary dark:text-content-inverse mb-4">
-            Card Component
-          </h3>
-          <p class="text-content-secondary dark:text-brand-300">
-            Example card with proper theming and responsive design patterns.
-          </p>
+      </section>
+
+      <!-- Spacing Section -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-content-primary  mb-8">Spacing & Layout</h2>
+        
+        <!-- Custom Spacing -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold text-content-primary  mb-6">Custom Spacing Values</h3>
+          <div class="space-y-6">
+            <div class="flex items-center gap-6">
+              <code class="text-xs text-content-tertiary w-16 font-mono">18</code>
+              <div class="h-6 bg-blue-300 rounded" style="width: 4.5rem;"></div>
+              <span class="text-sm text-content-secondary">4.5rem (72px)</span>
+            </div>
+            <div class="flex items-center gap-6">
+              <code class="text-xs text-content-tertiary w-16 font-mono">88</code>
+              <div class="h-6 bg-blue-300 rounded" style="width: 22rem;"></div>
+              <span class="text-sm text-content-secondary">22rem (352px)</span>
+            </div>
+            <div class="flex items-center gap-6">
+              <code class="text-xs text-content-tertiary w-16 font-mono">128</code>
+              <div class="h-6 bg-blue-300 rounded" style="width: 32rem;"></div>
+              <span class="text-sm text-content-secondary">32rem (512px)</span>
+            </div>
+          </div>
         </div>
-      </div>
+
+        <!-- Layout Dimensions -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold text-content-primary  mb-6">Layout Dimensions</h3>
+          <div class="space-y-4">
+            <div class="p-4 bg-brand-800 rounded-lg">
+              <div class="flex justify-between items-center">
+                <code class="text-sm font-mono text-content-primary">max-w-container</code>
+                <span class="text-sm text-content-secondary">86rem (1376px) - Main content container width</span>
+              </div>
+            </div>
+            <div class="p-4 bg-brand-800 rounded-lg">
+              <div class="flex justify-between items-center">
+                <code class="text-sm font-mono text-content-primary">w-sidebar</code>
+                <span class="text-sm text-content-secondary">12.5rem (200px) - Sidebar width</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Border Radius Section -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-content-primary  mb-8">Border Radius</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div class="text-center">
+            <div class="h-20 w-20 bg-blue-300 mx-auto rounded mb-3"></div>
+            <div class="text-sm font-mono text-content-primary mb-1">rounded</div>
+            <div class="text-xs text-content-tertiary">6.08px</div>
+          </div>
+          <div class="text-center">
+            <div class="h-20 w-20 bg-blue-300 mx-auto rounded-lg mb-3"></div>
+            <div class="text-sm font-mono text-content-primary mb-1">rounded-lg</div>
+            <div class="text-xs text-content-tertiary">6.08px</div>
+          </div>
+          <div class="text-center">
+            <div class="h-20 w-20 bg-blue-300 mx-auto rounded-xl mb-3"></div>
+            <div class="text-sm font-mono text-content-primary mb-1">rounded-xl</div>
+            <div class="text-xs text-content-tertiary">6.08px</div>
+          </div>
+          <div class="text-center">
+            <div class="h-20 w-20 bg-blue-300 mx-auto rounded-full mb-3"></div>
+            <div class="text-sm font-mono text-content-primary mb-1">rounded-full</div>
+            <div class="text-xs text-content-tertiary">9999px</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Z-Index Section -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-content-primary  mb-8">Z-Index Scale</h2>
+        <div class="space-y-3">
+          <div class="flex items-center justify-between p-4 bg-brand-800 border border-gray-200 rounded-lg">
+            <code class="text-sm font-mono text-content-primary">z-dropdown</code>
+            <span class="text-sm text-content-secondary">10</span>
+          </div>
+          <div class="flex items-center justify-between p-4 bg-brand-800 border border-gray-200 rounded-lg">
+            <code class="text-sm font-mono text-content-primary">z-sticky</code>
+            <span class="text-sm text-content-secondary">20</span>
+          </div>
+          <div class="flex items-center justify-between p-4 bg-brand-800 border border-gray-200 rounded-lg">
+            <code class="text-sm font-mono text-content-primary">z-fixed</code>
+            <span class="text-sm text-content-secondary">30</span>
+          </div>
+          <div class="flex items-center justify-between p-4 bg-brand-800 border border-gray-200 rounded-lg">
+            <code class="text-sm font-mono text-content-primary">z-modal-backdrop</code>
+            <span class="text-sm text-content-secondary">40</span>
+          </div>
+          <div class="flex items-center justify-between p-4 bg-brand-800 border border-gray-200 rounded-lg">
+            <code class="text-sm font-mono text-content-primary">z-modal</code>
+            <span class="text-sm text-content-secondary">50</span>
+          </div>
+          <div class="flex items-center justify-between p-4 bg-brand-800 border border-gray-200 rounded-lg">
+            <code class="text-sm font-mono text-content-primary">z-popover</code>
+            <span class="text-sm text-content-secondary">60</span>
+          </div>
+          <div class="flex items-center justify-between p-4 bg-brand-800 border border-gray-200 rounded-lg">
+            <code class="text-sm font-mono text-content-primary">z-tooltip</code>
+            <span class="text-sm text-content-secondary">70</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Reference -->
+      <section class="mb-16">
+        <h2 class="text-3xl font-bold text-content-primary  mb-8">Quick Reference</h2>
+        
+        <!-- Most Used Classes -->
+        <div class="mb-12">
+          <h3 class="text-2xl font-semibold text-content-primary  mb-6">Most Used Classes</h3>
+          <div class="bg-brand-900 text-content-primary p-6 rounded-lg font-mono text-sm overflow-x-auto">
+            <pre><code>/* Backgrounds */
+bg-surface                /* Black background */
+bg-brand-900              /* Very dark gray */
+bg-orange-500             /* Orange accent color */
+
+/* Text Colors */
+text-content-primary      /* White text #ffffff */
+text-content-secondary    /* Light gray text #d4d4d4 */
+text-content-inverse      /* Black text #000000 */
+
+/* Interactive States */
+hover:bg-surface-hover    /* White hover state */
+hover:bg-orange-600       /* Orange hover state */
+
+/* Layout */
+max-w-container           /* Content container width */
+w-sidebar                /* Sidebar width */
+
+/* Dark Mode */
+         /* Dark background */
+ /* Dark mode text */</code></pre>
+          </div>
+        </div>
+
+        <!-- Common Patterns -->
+        <div>
+          <h3 class="text-2xl font-semibold text-content-primary  mb-6">Common Patterns</h3>
+          <div class="bg-brand-900 text-content-primary p-6 rounded-lg font-mono text-sm overflow-x-auto">
+            <pre><code>/* Card Pattern */
+bg-brand-800 border border-brand-600 rounded-lg p-6
+
+/* Button Pattern */
+px-4 py-2 bg-orange-500 text-content-inverse rounded hover:bg-orange-600
+
+/* Input Pattern */
+px-3 py-2 border border-gray-300 rounded focus:ring-2 focus:ring-brand-500</code></pre>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
 </BaseLayout>

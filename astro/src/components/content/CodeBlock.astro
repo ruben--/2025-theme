@@ -1,0 +1,13 @@
+---
+export interface Props {
+  code: string;
+  language?: string;
+  class?: string;
+}
+
+const { code, class: className } = Astro.props;
+---
+
+<code class={`bg-brand-900 dark:bg-brand-950 text-green-400 px-3 py-2 rounded-lg text-sm ${className || ''}`}>
+  {code}
+</code>

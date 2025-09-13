@@ -1,0 +1,19 @@
+---
+import DarkModeToggle from '../ui/DarkModeToggle';
+
+interface Props {
+  title?: string;
+}
+
+const { title = "Navigation" } = Astro.props;
+---
+
+<div class="md:hidden flex items-center justify-between p-4 bg-surface border-b border-brand-700">
+  <h1 class="text-lg font-semibold text-content-primary">
+    {title}
+  </h1>
+  <div class="flex items-center space-x-3">
+    <DarkModeToggle client:load />
+    <slot />
+  </div>
+</div>

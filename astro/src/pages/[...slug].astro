@@ -1,0 +1,105 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+// Import all block components
+import StatsSection from '../components/blocks/StatsSection';
+// Add more block imports here as you create them
+// import HeroSection from '../components/blocks/HeroSection';
+// import FeatureGrid from '../components/blocks/FeatureGrid';
+
+// Register all available block components
+const BLOCK_COMPONENTS = {
+  StatsSection,
+  // HeroSection,
+  // FeatureGrid,
+  // Add more blocks here
+};
+
+// Get all pages for static path generation
+export async function getStaticPaths() {
+  const pages = await getCollection('pages');
+  
+  return pages.map(page => ({
+    params: { 
+      slug: page.data.slug === 'index' ? undefined : page.data.slug 
+    },
+    props: { pageEntry: page },
+  }));
+}
+
+interface Props {
+  pageEntry: any;
+}
+
+const { pageEntry } = Astro.props;
+
+if (!pageEntry) {
+  return Astro.redirect('/404');
+}
+
+// Load all block content for this page
+const blocks = await Promise.all(
+  pageEntry.data.blocks.map(async (block: any) => {
+    try {
+      const content = await getEntry('blocks', block.content);
+      if (!content) {
+        console.warn(`Block content not found: ${block.content}`);
+        return null;
+      }
+      
+      const Component = BLOCK_COMPONENTS[block.type as keyof typeof BLOCK_COMPONENTS];
+      if (!Component) {
+        console.warn(`Block component not found: ${block.type}`);
+        return null;
+      }
+      
+      return {
+        type: block.type,
+        content: content.data,
+        Component,
+        variant: block.variant,
+      };
+    } catch (error) {
+      console.error(`Error loading block ${block.content}:`, error);
+      return null;
+    }
+  })
+);
+
+// Filter out any null blocks (failed to load)
+const validBlocks = blocks.filter(Boolean);
+---
+
+<BaseLayout 
+  title={`${pageEntry.data.title} - OpenAI Sidebar Template`}
+  description={pageEntry.data.description}
+>
+  <div>
+    <h1 class="text-4xl font-semibold text-content-primary mb-8">
+      {pageEntry.data.title}
+    </h1>
+    
+    {validBlocks.length > 0 ? (
+      <div class="space-y-12">
+        {validBlocks.map((block, index) => {
+          const { Component, content } = block;
+          if (block.type === 'StatsSection') {
+            return (
+              <div key={index} class="block-wrapper">
+                <div class="w-full h-1 bg-orange-500 my-8" style="; height: 4px;"></div>
+                <StatsSection content={content} client:load />
+                <div class="w-full h-1 bg-orange-500 my-8" style="; height: 4px;"></div>
+              </div>
+            );
+          }
+          return null;
+        })}
+      </div>
+    ) : (
+      <p class="text-content-secondary">
+        No content blocks configured for this page yet.
+      </p>
+    )}
+  </div>
+</BaseLayout>

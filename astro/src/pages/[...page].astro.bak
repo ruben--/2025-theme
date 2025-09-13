@@ -1,0 +1,27 @@
+---
+import { getCollection } from 'astro:content';
+import ContentLayout from '../layouts/ContentLayout.astro';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('pages');
+  
+  return pages
+    .filter(page => page.id !== 'overview') // Skip overview as it's handled by index.astro
+    .map(page => ({
+      params: { page: page.id },
+      props: { entry: page },
+    }));
+}
+
+interface Props {
+  entry: any;
+}
+
+const { entry } = Astro.props;
+
+if (!entry) {
+  return Astro.redirect('/404');
+}
+---
+
+<ContentLayout entry={entry} />

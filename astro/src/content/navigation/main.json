@@ -1,0 +1,44 @@
+[
+  {
+    "id": "overview",
+    "title": "Overview",
+    "href": "/",
+    "order": 1
+  },
+  {
+    "id": "safety",
+    "title": "Safety",
+    "href": "/safety",
+    "order": 2
+  },
+  {
+    "id": "documentation",
+    "title": "Documentation",
+    "href": "/documentation",
+    "order": 3
+  },
+  {
+    "id": "settings",
+    "title": "Settings",
+    "href": "/settings",
+    "order": 4
+  },
+  {
+    "id": "profile",
+    "title": "Profile",
+    "href": "/profile",
+    "order": 5
+  },
+  {
+    "id": "theme",
+    "title": "Theme",
+    "href": "/theme",
+    "order": 6
+  },
+  {
+    "id": "blocks",
+    "title": "Blocks",
+    "href": "/blocks",
+    "order": 7
+  }
+]

@@ -1,0 +1,29 @@
+---
+title: "Safety"
+description: "Safety features and best practices for the OpenAI sidebar template."
+showInNav: true
+navOrder: 2
+---
+
+# Safety
+
+This page contains information about safety considerations and best practices when using this template.
+
+## Security Features
+
+- **Content Security Policy**: Implement proper CSP headers
+- **Input Validation**: Always validate user inputs
+- **Authentication**: Secure authentication mechanisms
+- **Data Protection**: Protect sensitive user data
+
+## Best Practices
+
+1. **Regular Updates**: Keep dependencies updated
+2. **Code Reviews**: Implement code review processes
+3. **Testing**: Comprehensive testing strategy
+4. **Monitoring**: Monitor for security issues
+
+## Resources
+
+- [OWASP Security Guidelines](https://owasp.org)
+- [Astro Security Best Practices](https://docs.astro.build)

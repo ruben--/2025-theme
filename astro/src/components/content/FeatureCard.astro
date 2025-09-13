@@ -1,0 +1,18 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  class?: string;
+}
+
+const { title, description, class: className } = Astro.props;
+---
+
+<div class={`bg-surface dark:bg-brand-900 border border-brand-200 dark:border-brand-700 rounded-lg p-6 ${className || ''}`}>
+  <h2 class="text-xl font-semibold text-content-primary dark:text-content-inverse mb-4">
+    {title}
+  </h2>
+  <p class="text-content-secondary dark:text-brand-300">
+    {description}
+  </p>
+</div>

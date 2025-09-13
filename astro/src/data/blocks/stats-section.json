@@ -1,0 +1,33 @@
+{
+  "title": "We approach work as a place to make the world better",
+  "description": "Diam nunc lacus lacus aliquam turpis enim. Eget hac velit est euismod lacus. Est non placerat nam arcu. Cras purus nibh cursus sit eu in id. Integer vel nibh.",
+  "stats": [
+    {
+      "value": "250k",
+      "title": "Users on the platform",
+      "description": "Vel labore deleniti veniam consequuntur sunt nobis.",
+      "bgColor": "bg-brand-50 dark:bg-brand-800",
+      "textColor": "text-content-primary dark:text-content-inverse",
+      "valueColor": "text-content-primary dark:text-content-inverse",
+      "descColor": "text-content-secondary dark:text-brand-300"
+    },
+    {
+      "value": "$8.9 billion",
+      "title": "We're proud that our customers have made over $8 billion in total revenue.",
+      "description": "Eu duis porta aliquam ornare. Elementum eget magna egestas.",
+      "bgColor": "bg-brand-900 dark:bg-brand-950",
+      "textColor": "text-content-inverse",
+      "valueColor": "text-content-inverse",
+      "descColor": "text-brand-400"
+    },
+    {
+      "value": "401,093",
+      "title": "Transactions this year",
+      "description": "Eu duis porta aliquam ornare. Elementum eget magna egestas. Eu duis porta aliquam ornare.",
+      "bgColor": "bg-indigo-600",
+      "textColor": "text-content-inverse",
+      "valueColor": "text-content-inverse", 
+      "descColor": "text-indigo-200"
+    }
+  ]
+}

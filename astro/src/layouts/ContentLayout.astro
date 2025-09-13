@@ -1,0 +1,26 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import { render, type CollectionEntry } from 'astro:content';
+
+interface Props {
+  entry: CollectionEntry<'pages'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await render(entry);
+---
+
+<BaseLayout 
+  title={`${entry.data.title} - OpenAI Sidebar Template`} 
+  description={entry.data.description}
+>
+  <div>
+    <h1 class="text-4xl font-semibold text-content-primary dark:text-content-inverse mb-8">
+      {entry.data.title}
+    </h1>
+    
+    <div class="prose prose-lg dark:prose-invert max-w-none text-content-primary dark:text-content-inverse">
+      <Content />
+    </div>
+  </div>
+</BaseLayout>

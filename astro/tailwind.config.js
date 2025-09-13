@@ -40,21 +40,44 @@ export default {
           950: '#0f0f0f',
         },
         
-        // Semantic colors for UI elements
-        surface: {
-          DEFAULT: '#ffffff',
-          hover: 'rgba(0, 0, 0, 0.04)',
-          active: 'rgba(0, 0, 0, 0.08)',
-          muted: '#fafafa',
+        // Orange color scheme for interactive elements
+        orange: {
+          50: '#fff7ed',
+          100: '#ffedd5',
+          200: '#fed7aa',
+          300: '#fdba74',
+          400: '#fb923c',
+          500: '#f97316',
+          600: '#ea580c',
+          700: '#c2410c',
+          800: '#9a3412',
+          900: '#7c2d12',
+          950: '#431407',
         },
         
-        // Text colors
-        content: {
-          primary: '#0f0f0f',
-          secondary: '#6b6b6b',
-          tertiary: '#8d8d8d',
-          inverse: '#ffffff',
+        // Semantic colors for UI elements
+        surface: {
+          DEFAULT: '#000000',
+          hover: 'rgba(255, 255, 255, 0.04)',
+          active: 'rgba(255, 255, 255, 0.08)',
+          muted: '#111111',
         },
+        
+        'surface-hover': 'rgba(255, 255, 255, 0.04)',
+        'surface-active': 'rgba(255, 255, 255, 0.08)',
+        
+        // Text colors for dark theme
+        content: {
+          primary: '#ffffff',
+          secondary: '#d4d4d4',
+          tertiary: '#a3a3a3',
+          inverse: '#000000',
+        },
+        
+        'content-primary': '#ffffff',
+        'content-secondary': '#d4d4d4',
+        'content-tertiary': '#a3a3a3',
+        'content-inverse': '#000000',
       },
       
       // Grid templates
@@ -63,9 +86,9 @@ export default {
         '12': 'repeat(12, minmax(0, 1fr))', // 12-column grid
       },
       
-      // Typography - using Inter font
+      // Typography - using Graphik font
       fontFamily: {
-        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
+        sans: ['Graphik', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif'],
       },
       
       // Custom animations
@@ -87,11 +110,21 @@ export default {
         'popover': '60',
         'tooltip': '70',
       },
+      
+      // Custom border radius
+      borderRadius: {
+        'DEFAULT': '6.08px',
+        'lg': '6.08px',
+        'md': '6.08px',
+        'xl': '6.08px',
+        '2xl': '6.08px',
+        'full': '9999px',
+      },
     },
   },
   plugins: [
     // Add typography plugin for better text rendering
-    // require('@tailwindcss/typography'),
+    require('@tailwindcss/typography'),
     
     // Custom component plugin
     function({ addComponents, theme }) {

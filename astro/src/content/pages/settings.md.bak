@@ -1,0 +1,34 @@
+---
+title: "Settings"
+description: "Application settings and configuration options."
+showInNav: true
+navOrder: 4
+---
+
+# Settings
+
+Configure your application preferences and settings.
+
+## Theme Settings
+
+- **Dark Mode**: Toggle between light and dark themes
+- **System Theme**: Follow system preference automatically
+- **Custom Colors**: Customize accent colors
+
+## Layout Settings
+
+- **Sidebar Width**: Adjust sidebar width
+- **Content Width**: Set maximum content width
+- **Typography**: Choose preferred font families
+
+## Accessibility
+
+- **High Contrast**: Enable high contrast mode
+- **Reduced Motion**: Respect user's motion preferences
+- **Font Size**: Adjust base font size
+
+## Developer Settings
+
+- **Debug Mode**: Enable development debugging
+- **Performance Metrics**: Show performance indicators
+- **Hot Reload**: Enable hot reloading in development
