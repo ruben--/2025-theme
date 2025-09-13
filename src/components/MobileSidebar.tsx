@@ -79,12 +79,7 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                   className={`sidebar-nav-item ${item.isActive ? 'active' : ''}`}
                   aria-current={item.isActive ? 'page' : undefined}
                 >
-                  <div className="flex items-center">
-                    {item.icon && (
-                      <item.icon className="mr-2.5 h-4 w-4 flex-shrink-0 text-gray-400" />
-                    )}
-                    <span className="truncate">{item.label}</span>
-                  </div>
+                  <span className="truncate">{item.label}</span>
                 </a>
                 
                 {/* Nested navigation items */}
@@ -101,12 +96,7 @@ export const MobileSidebar: React.FC<MobileSidebarProps> = ({
                         className={`sidebar-nav-child ${child.isActive ? 'active' : ''}`}
                         aria-current={child.isActive ? 'page' : undefined}
                       >
-                        <div className="flex items-center">
-                          {child.icon && (
-                            <child.icon className="mr-2 h-3 w-3 flex-shrink-0 text-gray-400" />
-                          )}
-                          <span className="truncate">{child.label}</span>
-                        </div>
+                        <span className="truncate">{child.label}</span>
                       </a>
                     ))}
                   </div>

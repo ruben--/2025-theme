@@ -4,11 +4,11 @@ import type { SidebarProps } from '../types/navigation';
 export const Sidebar: React.FC<SidebarProps> = ({ navigation, onItemClick }) => {
   return (
     <nav 
-      className="px-3 w-sidebar absolute right-0 top-0 mt-48 hidden md:block"
+      className="px-3 w-full h-full overflow-y-auto"
       id="navigation-sidebar-desktop"
       aria-label="Desktop navigation"
     >
-      <div className="space-y-0.5 py-4">
+      <div className="space-y-0.5 py-4 pt-20">
         {navigation.map((item) => (
           <div key={item.id}>
             <a
@@ -22,12 +22,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ navigation, onItemClick }) => 
               className={`nav-item ${item.isActive ? 'nav-item--active' : ''}`}
               aria-current={item.isActive ? 'page' : undefined}
             >
-              <div className="flex items-center">
-                {item.icon && (
-                  <item.icon className="mr-2.5 h-4 w-4 flex-shrink-0 text-content-tertiary dark:text-brand-400" />
-                )}
-                <span className="truncate">{item.label}</span>
-              </div>
+              <span className="truncate">{item.label}</span>
             </a>
             
             {/* Nested navigation items */}
@@ -46,12 +41,7 @@ export const Sidebar: React.FC<SidebarProps> = ({ navigation, onItemClick }) => 
                     className={`nav-child ${child.isActive ? 'nav-child--active' : ''}`}
                     aria-current={child.isActive ? 'page' : undefined}
                   >
-                    <div className="flex items-center">
-                      {child.icon && (
-                        <child.icon className="mr-2 h-3 w-3 flex-shrink-0 text-content-tertiary dark:text-brand-400" />
-                      )}
-                      <span className="truncate">{child.label}</span>
-                    </div>
+                    <span className="truncate">{child.label}</span>
                   </a>
                 ))}
               </div>

@@ -68,4 +68,9 @@ export const navigationData: NavigationItem[] = [
     href: '/theme',
     icon: PaintBrushIcon,
   },
+  {
+    id: 'blocks',
+    label: 'Blocks',
+    href: '/blocks',
+  },
 ];

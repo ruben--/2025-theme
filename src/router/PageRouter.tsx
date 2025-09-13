@@ -5,6 +5,7 @@ import { DocumentationPage } from '../pages/DocumentationPage';
 import { SettingsPage } from '../pages/SettingsPage';
 import { ProfilePage } from '../pages/ProfilePage';
 import { ThemePage } from '../pages/ThemePage';
+import { BlocksPage } from '../pages/BlocksPage';
 import { useLayout } from '../providers/LayoutProvider';
 
 // Page registry for clean routing
@@ -15,6 +16,7 @@ const pages = {
   settings: SettingsPage,
   profile: ProfilePage,
   theme: ThemePage,
+  blocks: BlocksPage,
 } as const;
 
 export type PageKey = keyof typeof pages;

@@ -31,7 +31,7 @@ export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
       <div className="hidden md:block"></div>
       
       {/* Desktop Column 2: Sidebar area (hidden on mobile) */}
-      <div className="relative hidden md:block bg-surface dark:bg-brand-900">
+      <div className="sticky top-0 h-screen hidden md:block bg-surface dark:bg-brand-900">
         <Sidebar 
           navigation={navigationData} 
           onItemClick={handleNavigationClick}
