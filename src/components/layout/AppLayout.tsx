@@ -1,24 +1,29 @@
 import React from 'react';
-import { Sidebar } from './Sidebar';
-import { MobileSidebar } from './MobileSidebar';
-import { SidebarToggle } from './SidebarToggle';
-import { useSidebar } from '../hooks/useSidebar';
-import { useDarkMode } from '../hooks/useDarkMode';
-import type { NavigationItem } from '../types/navigation';
+import { Sidebar } from '../Sidebar';
+import { MobileSidebar } from '../MobileSidebar';
+import { SidebarToggle } from '../SidebarToggle';
+import { useLayout } from '../../providers/LayoutProvider';
+import { navigationData } from '../../data/navigation';
+import type { NavigationItem } from '../../types/navigation';
 
-interface LayoutProps {
+interface AppLayoutProps {
   children: React.ReactNode;
-  navigation: NavigationItem[];
-  onNavigationClick?: (item: NavigationItem) => void;
 }
 
-export const Layout: React.FC<LayoutProps> = ({ 
-  children, 
-  navigation, 
-  onNavigationClick 
-}) => {
-  const { isMobileOpen, toggleMobile, closeMobile } = useSidebar();
-  const { isDarkMode, toggleDarkMode } = useDarkMode();
+export const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
+  const { 
+    isMobileOpen, 
+    toggleMobile, 
+    closeMobile, 
+    isDarkMode, 
+    toggleDarkMode,
+    setActivePage 
+  } = useLayout();
+
+  const handleNavigationClick = (item: NavigationItem) => {
+    setActivePage(item.id);
+    console.log('Navigation clicked:', item.label);
+  };
 
   return (
     <div className="sidebar-layout">
@@ -28,24 +33,26 @@ export const Layout: React.FC<LayoutProps> = ({
       {/* Desktop Column 2: Sidebar area (hidden on mobile) */}
       <div className="relative hidden md:block bg-surface dark:bg-brand-900">
         <Sidebar 
-          navigation={navigation} 
-          onItemClick={onNavigationClick}
+          navigation={navigationData} 
+          onItemClick={handleNavigationClick}
         />
       </div>
       
       {/* Mobile Sidebar */}
       <MobileSidebar
-        navigation={navigation}
+        navigation={navigationData}
         isOpen={isMobileOpen}
         onClose={closeMobile}
-        onItemClick={onNavigationClick}
+        onItemClick={handleNavigationClick}
       />
       
       {/* Mobile: Column 1 / Desktop: Column 3 - Main Content Area */}
       <main className="flex min-h-screen w-full flex-col bg-brand-50 dark:bg-brand-950">
         {/* Mobile Header with Toggle */}
         <div className="md:hidden flex items-center justify-between p-4 bg-surface dark:bg-brand-900 border-b border-brand-200 dark:border-brand-800">
-          <h1 className="text-lg font-semibold text-content-primary dark:text-content-inverse">Navigation</h1>
+          <h1 className="text-lg font-semibold text-content-primary dark:text-content-inverse">
+            Navigation
+          </h1>
           <div className="flex items-center space-x-3">
             <button
               onClick={toggleDarkMode}
